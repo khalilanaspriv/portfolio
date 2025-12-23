@@ -61,54 +61,72 @@ a:hover {
   text-decoration-thickness: 2px;
 }
 
-.primary-btn {
+button {
   cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   font-family: inherit;
   font-size: var(--fontsize-sm);
   color: white;
 
+  border: none;
+  border-radius: var(--radius-sm);
+
+  box-shadow: var(--shadow-xxl);
+
+  background-color: rgb(20, 52, 99);
+
+  margin: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+
+  transition: background-color var(--transition-normal), transform var(--transition-normal);
+}
+
+button:hover {
+  transform: translateY(-1px);
+
+  background-color: rgb(21, 66, 134);
+}
+
+.btn-primary {
   background-color: rgb(var(--color-primary-accent));
-
-  border: none;
-  border-radius: var(--radius-sm);
-
-  box-shadow: var(--shadow-xxl);
-
-  margin: var(--spacing-xs);
-  padding: var(--spacing-sm) var(--spacing-md);
-
-  transition: background-color var(--transition-normal), transform var(--transition-normal);
 }
 
-.primary-btn:hover {
+.btn-primary:hover {
   background-color: rgb(var(--color-primary-accent-hover));
-
-  transform: translateY(-1px);
 }
 
-.secondary-btn {
-  cursor: pointer;
-
-  font-family: inherit;
-  font-size: var(--fontsize-sm);
-  color: white;
-
+.btn-secondary {
   background-color: rgb(var(--color-secondary-accent));
-
-  border: none;
-  border-radius: var(--radius-sm);
-
-  box-shadow: var(--shadow-xxl);
-
-  margin: var(--spacing-xs);
-  padding: var(--spacing-sm) var(--spacing-md);
-
-  transition: background-color var(--transition-normal), transform var(--transition-normal);
 }
 
-.secondary-btn:hover {
+.btn-secondary:hover {
   background-color: rgb(var(--color-secondary-accent-hover));
+}
 
-  transform: translateY(-1px);
+.btn-success {
+  background-color: rgb(var(--color-success));
+}
+
+.btn-success:hover {
+  background-color: rgb(var(--color-success-hover));
+}
+
+.btn-error {
+  background-color: rgb(var(--color-error));
+}
+
+.btn-error:hover {
+  background-color: rgb(var(--color-error-hover));
+}
+
+.btn-warning {
+  background-color: rgb(var(--color-warning));
+}
+
+.btn-warning:hover {
+  background-color: rgb(var(--color-warning-hover));
 }
