@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", "Arial", sans-serif;
+  font-size: var(--fontsize-sm);
+  line-height: 1.6;
+  color: rgb(var(--color-primary-text));
+
+  background-color: rgb(var(--color-primary-bg));
+
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+h1 {
+  font-size: var(--fontsize-xxl);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: var(--fontsize-xl);
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: var(--fontsize-lg);
+  line-height: 1.4;
+
+}
+
+h4 {
+  font-size: var(--fontsize-md);
+}
+
+p {
+  font-size: var(--fontsize-sm);
+}
+
+ul {
+  list-style: none;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.primary-btn {
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: var(--fontsize-sm);
+  color: white;
+
+  background-color: rgb(var(--color-primary-accent));
+
+  border: none;
+  border-radius: var(--radius-sm);
+
+  box-shadow: var(--shadow-xxl);
+
+  margin: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+
+  transition: background-color var(--transition-normal), transform var(--transition-normal);
+}
+
+.primary-btn:hover {
+  background-color: rgb(var(--color-primary-accent-hover));
+
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: var(--fontsize-sm);
+  color: white;
+
+  background-color: rgb(var(--color-secondary-accent));
+
+  border: none;
+  border-radius: var(--radius-sm);
+
+  box-shadow: var(--shadow-xxl);
+
+  margin: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+
+  transition: background-color var(--transition-normal), transform var(--transition-normal);
+}
+
+.secondary-btn:hover {
+  background-color: rgb(var(--color-secondary-accent-hover));
+
+  transform: translateY(-1px);
+}
