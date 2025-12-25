@@ -1,0 +1,148 @@
+.main-header {
+  background-color: rgb(var(--color-secondary-bg));
+
+  border: 1px solid rgb(var(--color-border));
+
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin: var(--spacing-sm);
+
+  border-radius: var(--radius-full);
+
+  position: sticky;
+  top: var(--spacing-sm);
+
+  z-index: 999;
+}
+
+.main-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: var(--fontsize-md);
+  font-weight: 800;
+}
+
+.nav-menu-toggle {
+  font-size: var(--fontsize-lg);
+  color: inherit;
+}
+
+.nav-menu {
+  background-color: rgb(var(--color-secondary-bg));
+  
+  position: fixed;
+  top: 6rem;
+  left: var(--spacing-sm);
+  right: var(--spacing-sm);
+
+  border: 1px solid rgb(var(--color-border));
+  border-radius: var(--radius-lg);
+
+  visibility: hidden;
+  opacity: 0;
+
+  z-index: 998;
+
+  transform: translateY(-15px);
+
+  display: flex;
+  justify-content: center;
+  
+  text-align: center;
+  
+  padding: var(--spacing-sm) var(--spacing-md);
+
+  transition: var(--transition-normal);
+}
+
+.nav-menu.active {
+  visibility: visible;
+  opacity: 1;
+
+  transform: translateY(0px);
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-link.current {
+  font-weight: 800;
+  color: rgb(var(--color-primary-accent));
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 997;
+
+  backdrop-filter: blur(2px);
+
+  background-color: rgba(0, 0, 0, 0.3);
+
+  transition: var(--transition-normal);
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .nav-menu-toggle {
+    display: none;
+  }
+
+  .main-header {
+    padding: var(--spacing-xs) var(--spacing-md);
+    width: fit-content;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    line-height: 1;
+  }
+
+  .main-header-container {
+    align-items: center;
+    gap: 120px;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .nav-menu {
+    position: static;
+  
+    background: none;
+    
+    border: none;
+
+    visibility: visible;
+    opacity: 1;
+
+    transform: translateY(0px);
+
+    transition: none;
+  }
+
+  .overlay.active {
+    display: none;
+  }
+}
