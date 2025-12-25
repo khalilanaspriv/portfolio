@@ -25,21 +25,21 @@
   --fontsize-xl: clamp(1.4rem, 1.5vw + 1rem, 1.953rem);
   --fontsize-xxl: clamp(1.7rem, 2.5vw + 1rem, 2.441rem);
 
-  --spacing-xxs: 0.25rem; 
-  --spacing-xs: 0.5rem;  
-  --spacing-sm: 1rem;    
-  --spacing-md: 1.5rem;  
-  --spacing-lg: 2.5rem;  
-  --spacing-xl: 4rem;    
-  --spacing-xxl: 7rem;
+  --spacing-xxs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.25rem;
+  --spacing-lg: 1.25rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
 
   --radius-xxs: 2px;
   --radius-xs: 4px;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-xxl: 32px;
+  --radius-xl: 16px;
+  --radius-xxl: 20px;
   --radius-full: 9999px;
 
   --shadow-xxs: 0 1px 2px rgba(0,0,0,0.05);
@@ -73,28 +73,28 @@
   --color-warning-hover: 255, 200, 80;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) {
   :root {
-    --spacing-xxl: 6rem;
-    --spacing-xl: 3.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  :root {
-    --spacing-md: 1.25rem;
+    --spacing-md: 1.5rem;
     --spacing-lg: 1.5rem;
     --spacing-xl: 2.5rem;
     --spacing-xxl: 4rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 1024px) {
   :root {
-    --spacing-lg: 1.25rem;
-    --spacing-xl: 2rem;
-    --spacing-xxl: 3rem;
-    --radius-xl: 16px;
-    --radius-xxl: 20px;
+    --spacing-xl: 3.5rem;
+    --spacing-xxl: 6rem;
+    --radius-xl: 24px;
+    --radius-xxl: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 4rem;
+    --spacing-xxl: 7rem;
   }
 }
