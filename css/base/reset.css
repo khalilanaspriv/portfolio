@@ -58,12 +58,12 @@ a {
   text-decoration: none;
   font-weight: 600;
   color: inherit;
+
+  transition: color var(--transition-fast);
 }
 
 a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
+  color: rgb(var(--color-primary-accent));
 }
 
 button {

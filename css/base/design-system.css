@@ -33,6 +33,8 @@
   --spacing-xl: 2rem;
   --spacing-xxl: 3rem;
 
+  --border-subtle: 3px solid rgba(var(--color-border), 0.3);
+
   --radius-xxs: 2px;
   --radius-xs: 4px;
   --radius-sm: 8px;
@@ -71,6 +73,8 @@
   --color-error-hover: 255, 120, 120;
   --color-warning: 255, 180, 50;
   --color-warning-hover: 255, 200, 80;
+
+  --border-subtle: 3px solid rgba(var(--color-border), 0.1);
 }
 
 @media (min-width: 768px) {
