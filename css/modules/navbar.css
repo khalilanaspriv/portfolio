@@ -1,4 +1,4 @@
-.main-header {
+.header {
   background-color: rgb(var(--color-secondary-bg));
 
   border: var(--border-subtle);
@@ -11,13 +11,11 @@
   position: sticky;
   top: var(--spacing-sm);
 
-  z-index: 999;
-}
-
-.main-header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  z-index: 999;
 }
 
 .logo {
