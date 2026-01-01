@@ -13,6 +13,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
+  <script>
+  (function() {
+      const savedMode = localStorage.getItem('mode');
+      const theme = savedMode || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const icon = document.querySelector('#mode-icon');
+        if (theme === 'light') {
+          icon.className = 'ri-moon-line';
+        } else {
+          icon.className = 'ri-sun-line';
+        }
+      });
+    })();
+  </script>
+
   <link rel="stylesheet" href="css/base/design-system.css">
   <link rel="stylesheet" href="css/base/reset.css">
   <link rel="stylesheet" href="css/modules/navbar.css">
@@ -43,9 +60,16 @@
       </ul>
     </nav>
 
-    <button class="nav-menu-toggle" id="nav-menu-toggle" title="Open Navigation Menu" aria-expanded="false" aria-label="Open Navigation Menu">
-      <i class="ri-menu-4-fill"></i>
-    </button>
+
+    <div class="nav-btns">
+      <button class="nav-mode-toggle" id="nav-mode-toggle" title="Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+        <i class="" id="mode-icon"></i>
+      </button>
+
+      <button class="nav-menu-toggle" id="nav-menu-toggle" title="Open Navigation Menu" aria-expanded="false" aria-label="Open Navigation Menu">
+        <i class="ri-menu-4-fill"></i>
+      </button>
+    </div>
   </header>
 
   <div class="overlay" id="overlay"></div>
