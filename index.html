@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-  <title></title>
-  <meta name="description" content="">
+
+  <title>Anas | Portfolio</title>
+  <meta name="description" content="Anas Khalil — Web Developer. Building clean, responsive, and user-centric websites with HTML, CSS, and JavaScript.">
 
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.min.css" rel="stylesheet">
 
@@ -14,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
   <script>
-  (function() {
+    (function () {
       const savedMode = localStorage.getItem('mode');
       const theme = savedMode || 'dark';
       document.documentElement.setAttribute('data-theme', theme);
@@ -33,7 +34,9 @@
   <link rel="stylesheet" href="css/base/design-system.css">
   <link rel="stylesheet" href="css/base/reset.css">
   <link rel="stylesheet" href="css/modules/navbar.css">
+  <link rel="stylesheet" href="css/modules/hero.css">
 </head>
+
 <body>
   <header class="header">
     <a href="/" class="logo" aria-label="Return Home" title="Return Home">
@@ -66,13 +69,58 @@
         <i class="" id="mode-icon"></i>
       </button>
 
-      <button class="nav-menu-toggle" id="nav-menu-toggle" title="Open Navigation Menu" aria-expanded="false" aria-label="Open Navigation Menu">
+      <button class="nav-menu-toggle" id="nav-menu-toggle" title="Open Navigation Menu" aria-expanded="false"
+        aria-label="Open Navigation Menu">
         <i class="ri-menu-4-fill"></i>
       </button>
     </div>
   </header>
 
+  <main class="main">
+    <section class="hero">
+      <img src="assets/images/hero.jpg" alt="My favorite wallpaper: Stars in the sky" class="hero-img">
+
+      <div class="hero-content">
+        <div class="hero-texts">
+          <h1 class="hero-title">Hi, I'm <span>Anas Khalil</span> 👋</h1>
+          <h4 class="hero-subtitle">I like to build things. 🏗️</h4>
+          <p class="hero-description">I'm a developer focused on writing clean code and solving complex problems.
+            Currently building projects with HTML, CSS, and JavaScript.</p>
+        </div>
+
+        <div class="hero-actions">
+          <div class="hero-btns">
+            <button class="btn primary view-my-work-btn" title="Let's Talk" aria-label="Let's Talk">Let's Talk<i class="ri-message-3-line"></i></button>
+
+            <button class="btn secondary download-cv-btn" title="Get my CV" aria-label="Get my CV">Get my CV<i class="ri-file-list-2-fill"></i></button>
+          </div>
+
+          <div class="hero-socials">
+            <ul class="socials-list">
+              <li class="socials-list-item">
+                <a href="#" class="social" id="linkedin-social" title="My LinkedIn" aria-label="My LinkedIn">
+                  <i class="ri-linkedin-fill"></i>
+                </a>
+              </li>
+              <li class="socials-list-item">
+                <a href="#" class="social" id="github-social" title="My GitHub" aria-label="My GitHub">
+                  <i class="ri-github-line"></i>
+                </a>
+              </li>
+              <li class="socials-list-item">
+                <a href="#" class="social" id="gmail-social" title="My Email" aria-label="My Email">
+                  <i class="ri-mail-line"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <div class="overlay" id="overlay"></div>
   <script src="js/main.js" defer></script>
 </body>
+
 </html>
